@@ -13,3 +13,9 @@
             data: { confirm: "Are you sure?" } %>
 
 <%= link_to "Adopt this tree!", new_tree_adoption_path(@tree) %>
+
+<%= simple_form_for [ @tree, @adoption ] do |f| %>
+  <%= f.input :starts_at, input_html: { :value => Date.today} %>
+  <%= f.input :ends_at, input_html: { :value => Date.today.year + 12} %>
+  <%= f.submit "Adopt this tree", class: "btn btn-primary" %>
+<% end %>
