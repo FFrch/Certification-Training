@@ -1,6 +1,6 @@
 <ul>
   <% @trees.each do |tree| %>
-    <li><%= tree.name %></li>
+    <li><%= link_to tree.name, tree_path(tree) %> <%= link_to "Edit", edit_tree_path(tree) %></li>
   <% end %>
 </ul>
 

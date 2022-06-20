@@ -1,0 +1,9 @@
+<h2><%= @tree.name %></h2>
+<p><%= @tree.address %></p>
+<p><%= @tree.fruits %></p>
+<p><%= @tree.description %></p>
+<p><%= @tree.quantity_by_year %></p>
+<p><%= @tree.price_per_year %></p>
+<p><%= @tree.user.first_name %> <%= @tree.user.last_name %></p>
+
+<%= link_to "Edit", edit_tree_path %>
