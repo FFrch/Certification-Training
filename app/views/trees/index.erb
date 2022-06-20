@@ -1,6 +1,9 @@
 <ul>
   <% @trees.each do |tree| %>
-    <li><%= link_to tree.name, tree_path(tree) %> <%= link_to "Edit", edit_tree_path(tree) %></li>
+    <li><%= link_to tree.name, tree_path(tree) %> <%= link_to "Edit", edit_tree_path(tree) %> <%= link_to "Delete",
+            tree_path(tree),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></li>
   <% end %>
 </ul>
 

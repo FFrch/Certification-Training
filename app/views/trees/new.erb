@@ -1,9 +1,9 @@
 <%= simple_form_for [ @tree ] do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :description %>
-  <%= f.input :price_per_year %>
+  <%= f.input :description, hint: 'Description between 20 & 280 characters.' %>
+  <%= f.input :price_per_year, hint: '> 1' %>
   <%= f.input :fruits, collection: ["Apple", "Apricot", "Cherry", "Chestnut", "Coconut tree", "Fig", "Grapefruit", "Hazel", "Mandarin", "Mango", "Mirabellier", "Mulberry", "Olivier", "Orange", "Pear", "Plum"] %>
-  <%= f.input :quantity_by_year %>
+  <%= f.input :quantity_by_year, hint: '> 1' %>
   <%= f.submit "Add this tree", class: "btn btn-primary" %>
 <% end %>

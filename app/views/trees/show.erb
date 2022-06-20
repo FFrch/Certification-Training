@@ -7,3 +7,7 @@
 <p><%= @tree.user.first_name %> <%= @tree.user.last_name %></p>
 
 <%= link_to "Edit", edit_tree_path %>
+<%= link_to "Delete #{@tree.name}",
+            tree_path(@tree),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

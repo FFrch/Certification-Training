@@ -30,6 +30,14 @@ class TreesController < ApplicationController
     redirect_to tree_path(@tree)
   end
 
+  def destroy
+    @tree = Tree.find(params[:id])
+    @tree.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to trees_path
+  end
+
   private
 
   def tree_params
