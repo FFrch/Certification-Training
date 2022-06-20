@@ -11,3 +11,5 @@
             tree_path(@tree),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Adopt this tree!", new_tree_adoption_path(@tree) %>

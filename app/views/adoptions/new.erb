@@ -1,0 +1,5 @@
+<%= simple_form_for [ @tree, @adoption ] do |f| %>
+  <%= f.input :starts_at %>
+  <%= f.input :ends_at %>
+  <%= f.submit "Adopt this tree", class: "btn btn-primary" %>
+<% end %>
