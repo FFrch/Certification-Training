@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :trees do
-    resources :adoption, only: [:new, :create, :index]
+    resources :adoptions, only: [:new, :create, :index]
     resources :reviews, only: [ :new, :create ]
   end
 end
